@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            COMP-1842 - JavaScript Tutorial 1
+        </title>
+    </head>
+    <body>
+        <p id="welcome"></p>
+        <p id="rect"></p>
+        <p id="add1"></p>
+        <p id="add2"></p>
+        <script>
+            var firstName = "Zobs";
+            var messageStart = "Hello ";
+            document.getElementById("welcome").innerHTML = messageStart + firstName + ", welcome to JavaScript";
+
+            var aWidth = 10;
+            var aHeight = 3;
+            var area = aWidth * aHeight
+            document.getElementById("rect").innerHTML = "Area of this rectangle is " + area;
+
+            var numberOne = 1;
+            var numberTwo = 2;
+            var numberThree = "3";
+            var numberFour = "4";
+            document.getElementById("add1").innerHTML = numberOne + numberTwo;
+            document.getElementById("add2").innerHTML = numberThree + numberFour;
+        </script>
+    </body>
+</html>

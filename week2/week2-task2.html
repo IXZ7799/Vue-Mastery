@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>enter height</p>
+    <input type="text" id="height">
+
+    <p>enter width</p>
+    <input type="text" id="width">
+
+    <p>enter length</p>
+    <input type="text" id="length">
+
+    <br><br>
+    <button onclick="doCalc()">Calculate area</button>
+
+    <p id="areaCalc"></p>
+
+    <script>
+        var newWidth;
+        var newHeight;
+        var newLength;
+        var newArea;
+
+        // Calculate the area of a rectangle
+        function calcRectangleArea(aWidth, aHeight, aLength) {
+            var area = aWidth * aHeight * aLength;
+            //console.log(aHeight, aWidth)
+            return area;
+        }
+        //process the button click
+        function doCalc() {
+            newWidth = document.getElementById("width").value;
+            newHeight = document.getElementById("height").value;
+            newLength = document.getElementById("length").value;
+
+            newArea = calcRectangleArea(newWidth, newHeight, newLength)
+            document.getElementById("areaCalc").innerHTML += "the  area of the rectangle " + newWidth + " by " + newHeight + " by " + newLength + " is " + newArea + "<br>";
+        }
+    </script>
+</body>
+
+</html>
